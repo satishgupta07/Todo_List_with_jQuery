@@ -17,20 +17,39 @@ function addItem() {
   inpNewTask.val('')
 }
  
- function clearDone() {
+function clearDone() {
     $('#ulTasks .done').remove()
   }
 
-  function sortTasks() {
+function sortTasks() {
     $('#ulTasks .done').appendTo(ulTasks)
+  }
+
+  function toggleInputButtons(valIsEmpty) {
+    if(!valIsEmpty) {
+        btnReset.prop('disabled', false)
+        btnAdd.prop('disabled', false)
+    }
+    else {
+        btnReset.prop('disabled', true)
+        btnAdd.prop('disabled', true)
+    }
   }
 
 inpNewTask.keypress((e) => {
   if (e.which == 13) addItem()
 })
 
+inpNewTask.on('input', () => {
+    toggleInputButtons(inpNewTask.val() == '')
+    
+})
+
 
 btnAdd.click(addItem)
-btnReset.click(() => inpNewTask.val(''))
+btnReset.click(() => {
+    inpNewTask.val('')
+    toggleInputButtons(true)
+})
 btnCleanup.click(clearDone)
 btnSort.click(sortTasks)
