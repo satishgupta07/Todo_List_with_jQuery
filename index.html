@@ -12,6 +12,9 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
+
+    <script defer src="script.js"></script>
+    
     <title>Todo_List</title>
 </head>
 <body>
@@ -23,8 +26,8 @@
     <div class="row">
       <div class="col">
         <div class="form-group">
-          <label for="newTask">New Task</label>
-          <input type="text" class="form-control" id="newTask" aria-describedby="newTaskHelp" placeholder="Enter the name of the task">
+          <label for="inpNewTask">New Task</label>
+          <input type="text" class="form-control" id="inpNewTask" aria-describedby="newTaskHelp" placeholder="Enter the name of the task">
           <small id="newTaskHelp" class="form-text text-muted">A short one line description of your task</small>
         </div>
       </div>
@@ -32,10 +35,10 @@
 
     <!--  Buttons -->
     <div class="row px-4">
-      <button class="btn btn-success col m-2">
+      <button class="btn btn-success col m-2" id="btnAdd">
         Add
       </button>
-      <button class="btn btn-danger col m-2">
+      <button class="btn btn-danger col m-2" id="btnClear">
         Clear
       </button>
 
@@ -43,7 +46,7 @@
 
     <!-- Task List -->
 
-    <ul class="row list-group m-2">
+    <ul class="row list-group m-2" id="ulTasks">
       <li class="list-group-item">Cras justo odio</li>
       <li class="list-group-item">Dapibus ac facilisis in</li>
       <li class="list-group-item">Morbi leo risus</li>
