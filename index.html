@@ -12,6 +12,8 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
+    <!-- font-awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/js/all.js"></script>
 
     <script defer src="script.js"></script>
     <link rel="stylesheet" href="style.css">
@@ -23,26 +25,45 @@
   <div class="container">
     <h1 align="center">Todo List</h1>
 
-    <!-- Input box -->
     <div class="row">
-      <div class="col">
-        <div class="form-group">
+    
+     <!-- Input box -->
+       <div class="col-md-7">
+         <div class="form-group">
           <label for="inpNewTask">New Task</label>
-          <input type="text" class="form-control" id="inpNewTask" aria-describedby="newTaskHelp" placeholder="Enter the name of the task">
+          <input type="text" class="form-control" id="inpNewTask"
+                 aria-describedby="newTaskHelp"
+                 placeholder="Enter the name of the task">
           <small id="newTaskHelp" class="form-text text-muted">A short one line description of your task</small>
         </div>
       </div>
-    </div>
+     
+      <!--  Buttons -->
+      <div class="col-md-5">
+        <div class="row">
+          <div class="col-6 col-sm-3 col-md-6 p-1">
+            <button class="btn btn-success col" id="btnAdd">
+              <i class="fas fa-plus-square"></i> Add
+            </button>
+          </div>
+          <div class="col-6 col-sm-3 col-md-6  p-1">
+            <button class="btn btn-danger col" id="btnReset">
+              <i class="fas fa-backspace"></i> Reset
+            </button>
+          </div>
+          <div class="col-6 col-sm-3 col-md-6  p-1">
+            <button class="btn btn-info col" id="btnSort">
+              <i class="fas fa-sort-amount-down"></i> Sort
+            </button>
+          </div>
+          <div class="col-6 col-sm-3 col-md-6  p-1">
+            <button class="btn btn-warning col" id="btnCleanup">
+              <i class="fas fa-trash-alt"></i> Cleanup
+            </button>
+          </div>
+        </div>
 
-    <!--  Buttons -->
-    <div class="row px-4">
-      <button class="btn btn-success col m-2" id="btnAdd">
-        Add
-      </button>
-      <button class="btn btn-danger col m-2" id="btnClear">
-        Clear
-      </button>
-
+      </div>
     </div>
 
     <!-- Task List -->
